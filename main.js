@@ -3,8 +3,8 @@ $(document).ready(function () {
     $("button").click(function (){
         $(".content").html($(".content").html() + "<p class='well'>" + text[i] + "</p>");
         i = i+1;
-    })
-})
+    });
+});
 
 var i = 0;
 var text = ["1. There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable. There is another theory which states that this has already happened. ",
@@ -48,4 +48,10 @@ var text = ["1. There is a theory which states that if ever anyone discovers exa
     "39. Protect me from knowing what I don’t need to know. Protect me from even knowing that there are things to know that I don’t know. Protect me from knowing that I decided not to know about the things that I decided not to know about. Amen.",
     "40. All you really need to know for the moment is that the universe is a lot more complicated than you might think, even if you start from a position of thinking it’s pretty damn complicated in the first place.",
     "41. In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.",
-    "42. Don’t Panic."]
+    "42. Don’t Panic."];
+
+    var startTime = new Date;
+
+    setInterval(function () {
+        $('.timer').text((new Date - startTime)/ 1000 + " seconds");
+    }, 1);
