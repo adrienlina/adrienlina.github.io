@@ -4,32 +4,34 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-<body>
-    <div class="container">
+<body ng-app="timerApp">
+    <div class="container" ng-controller="TimerCtrl">
         <div class="jumbotron">
             <h1>"The Hitchhiker's Guide to the Galaxy" Best Quotes</h1>
             <h3>Explained (or maybe not)</h3>
         </div>
         <div class="col-sm-3">
             <ul class="list-group">
-                <li class="list-group-item"><button class="btn btn-default">I Want to Know</button></li>
-                <li class="list-group-item"><button class="btn btn-default">the Meaning of Life,</button></li>
-                <li class="list-group-item"><button class="btn btn-default">the Universe</button></li>
-                <li class="list-group-item"><button class="btn btn-default">and Everything!</button></li>
+                <li class="list-group-item"><button class="btn btn-default" ng-click="newLine()">I Want to Know</button></li>
+                <li class="list-group-item"><button class="btn btn-default" ng-click="newLine()">the Meaning of Life,</button></li>
+                <li class="list-group-item"><button class="btn btn-default" ng-click="newLine()">the Universe</button></li>
+                <li class="list-group-item"><button class="btn btn-default" ng-click="newLine()">and Everything!</button></li>
             </ul>
             <div class="well">
                 <p>
                     I was asked to put a timer.
                     </br>Here it is:
-                    <div class="timer">
-
-                    </div>
+                    </br>(And now it's in Angular !)
+                    </br>{{timer}}
                 </p>
             </div>
         </div>
 
         <div class="col-sm-9">
-            <div class="content">
+            <div ng-repeat="line in shown">
+                <p class="well">
+                    {{line}}
+                </p>
             </div>
         </div>
     </div>
@@ -46,4 +48,5 @@
 
 <script src="vendor/js/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
-<script src="main.js"></script>
+<script src="vendor/js/angular.min.js"></script>
+<script src="js/app.js"></script>

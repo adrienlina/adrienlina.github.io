@@ -49,9 +49,3 @@ var text = ["1. There is a theory which states that if ever anyone discovers exa
     "40. All you really need to know for the moment is that the universe is a lot more complicated than you might think, even if you start from a position of thinking it’s pretty damn complicated in the first place.",
     "41. In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.",
     "42. Don’t Panic."];
-
-    var startTime = new Date;
-
-    setInterval(function () {
-        $('.timer').text((new Date - startTime)/ 1000 + " seconds");
-    }, 1);
