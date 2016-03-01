@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     $("button").click(function (){
-        $(".content").html($(".content").html() + "<p>" + text[i] + "</p>");
+        $(".content").html($(".content").html() + "<p class='well'>" + text[i] + "</p>");
         i = i+1;
     })
 })
