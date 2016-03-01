@@ -9,13 +9,6 @@ module.exports = (grunt) ->
     grunt.initConfig
 
         copy:
-            jquery:
-                files: [{
-                    expand: true
-                    cwd: "bower_components/jquery/dist/"
-                    src: "jquery.min.js"
-                    dest: "vendor/js/"
-                }]
             bootstrap:
                 files: [{
                     expand: true
@@ -35,6 +28,21 @@ module.exports = (grunt) ->
                     src: "*"
                     dest: "vendor/fonts/"
                 }]
+            jquery:
+                files: [{
+                    expand: true
+                    cwd: "bower_components/jquery/dist/"
+                    src: "jquery.min.js"
+                    dest: "vendor/js/"
+                }]
+            angular:
+                files: [{
+                    expand: true
+                    cwd: "bower_components/angular/"
+                    src: "angular.min.js"
+                    dest: "vendor/js/"
+                }]
+
 
     grunt.registerTask "build", [
         "copy"
